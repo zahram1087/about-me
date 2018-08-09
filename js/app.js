@@ -8,7 +8,7 @@ var userName = prompt('Hi there! What is your name?');
 
 alert(' Thanks for being here ' + userName + '. I\'m going to ask you some questions about me . These are yes or no questions so please feel free to answer with yes/no ');
 
-//ask them five yes/no questions
+// //ask them five yes/no questions
 
 var answerOne = prompt('Do I speak more than three languages?').toLowerCase();
 
@@ -63,6 +63,7 @@ if (answerFive === 'y' || answerFive === 'yes') {
 
 
 
+
 var answerSix = 6;
 var attempts = 0;
 while (attempts < 4) {
@@ -72,31 +73,32 @@ while (attempts < 4) {
     totalCorrect++;
     break;
   }
-  else if (userAnswerSix <= 1 || userAnswerSix <= 5) {
-    alert(' too low! Keep going');
+  else if (userAnswerSix < answerSix) {
+    alert(' too low! guess higher');
   }
-  else if (userAnswerSix >= 7 || userAnswerSix < 10) {
-    alert(' too high! Keep going');
+  else {
+    alert(' too high! guess lower');
   }
   attempts++;
+}
 
 
+var answerSeven = ['California', 'North Carolina', 'Texas', 'New York'];
+console.log(answerSeven);
+var tries = 0;
 
-  var answerSeven = ['California', 'North Carolina', 'Texas', 'New York'];
-  console.log(answerSeven);
-  var tries = 0;
-
-  while (tries < 6) {
-    var userAnswer = prompt('hi, can you guess the states I have lived in?');
-    for (var i = 0; i < answerSeven.length; i++) {
-
-      if (answerSeven[i] === userAnswer) {
-        alert(' Good Job!');
-        totalCorrect++;
-        break;
-      }
+while (tries < 7 ) {
+  var userAnswer = prompt('hi, can you guess the states I have lived in?');
+  for (var i = 0; i < answerSeven.length; i++) {
+    if (answerSeven[i] === userAnswer) {
+      alert(' Good Job!');
+      totalCorrect++;
+      break;
     }
-    tries++;
   }
-  alert('Good Job the answers were California , North Carolina , Texas , New York  ');
-  alert('You got ' + totalCorrect);
+  tries++;
+  alert('thanks for playing the answers were California , North Carolina , Texas , New York  ');
+
+}
+
+alert('You got ' + totalCorrect);
