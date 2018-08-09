@@ -1,13 +1,23 @@
 h1 {
     background-color: blue;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
+    font-family: fantasy;
+    padding-top: 20px;
 }
-p, h1, footer {
-     font-family: fantasy;
+p,footer {
+    text-align: center;
+    border: 2px solid blue;
+    margin: 20px;
+    font-size: 20px;
  }
 
 img {
-display: block;
-margin: auto;
+    display: block;
+    margin-left: 300px;
+    margin-top: 20px;
+    border-radius: 127px;
+}
+span {
+    text-decoration: underline;
 }
