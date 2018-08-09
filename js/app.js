@@ -4,11 +4,13 @@ var totalCorrect = 0;
 
 //get the user's name 
 
+function firstQuestion () { // First question - encompasses userName creation as well
+
 var userName = prompt('Hi there! What is your name?');
 
 alert(' Thanks for being here ' + userName + '. I\'m going to ask you some questions about me . These are yes or no questions so please feel free to answer with yes/no ');
 
-// //ask them five yes/no questions
+//ask them five yes/no questions
 
 var answerOne = prompt('Do I speak more than three languages?').toLowerCase();
 
@@ -20,6 +22,12 @@ if (answerOne === 'y' || answerOne === 'yes') {
   console.log(' The user was asked if I spoke more than three languages and they answered ' + answerOne);
 }
 
+} // firstQuestion closes here
+
+firstQuestion(); // Calling function in order to initiate quiz
+
+function secondQuestion () { 
+
 var answerTwo = prompt('Am I a twin?').toLowerCase();
 
 if (answerTwo === 'y' || answerTwo === 'yes') {
@@ -29,6 +37,12 @@ if (answerTwo === 'y' || answerTwo === 'yes') {
   alert('wrong! I have a twin sister!');
   console.log(' The user was asked if I was a twin and responded ' + answerTwo);
 }
+
+} // secondQuestion closes here
+
+secondQuestion(); // Call secondQuestion to keep quiz going
+
+function thirdQuestion () { // Creates thirdQuestion
 
 var answerThree = prompt('Was I born in the USA?').toLowerCase();
 
@@ -40,6 +54,12 @@ if (answerThree === 'n' || answerThree === 'no') {
   console.log(' The user was asked if I was born in the USA and responded ' + answerThree);
 }
 
+} // closes thirdQuestion
+
+thirdQuestion (); // call thirdQuestion to keep quiz going
+
+function fourthQuestion () { // creates fourthQuestion
+
 var answerFour = prompt('Have I ever committed a crime?').toLowerCase();
 
 if (answerFour === 'n' || answerFour === 'no') {
@@ -49,6 +69,12 @@ if (answerFour === 'n' || answerFour === 'no') {
   alert('really? As if I would be caught!');
   console.log(' The user was asked if I ever committed a crime and responded ' + answerFour);
 }
+}
+ // closes fourthQuestion
+
+fourthQuestion(); // calls fourthQuestion to keep quiz going
+
+function fifthQuestion () { // creates fifthQuestion
 
 var answerFive = prompt('Is my favorite book called ENDER\'S GAME?').toLowerCase();
 
@@ -61,7 +87,11 @@ if (answerFive === 'y' || answerFive === 'yes') {
   console.log(' The user was asked if my favorite book was Enders\'s game and responded ' + answerFive);
 }
 
+} // closes fifthQuestion
 
+fifthQuestion (); // calls fifthQuestion to keep quiz going
+
+function sixthQuestion () { // creates sixthQuestion
 
 
 var answerSix = 6;
@@ -82,17 +112,11 @@ while (attempts < 4) {
   attempts++;
 }
 
-// (while(they have guesses left){
-//they make guesses
-//check guess against each think in array
-// if correct
-// YAH!
-//if wrong
-// decroment guesses
-// tell them  
+} // closes sixthQuestion
 
-//(while, prompt, for, if else)
-//})
+sixthQuestion(); // calls sixthQuestion to keep quiz going
+
+function seventhQuestion () { // creates seventhQuestion
 
 var answerSeven = ['California', 'North Carolina', 'Texas', 'New York'];
 console.log(answerSeven);
@@ -113,4 +137,9 @@ while (tries < 7 && wrongAnswer) {
     alert('thanks for playing the answers were California , North Carolina , Texas , New York  ');
   }
 }
+
+} // closes seventhQuestion
+
+seventhQuestion(); // calls seventhQuestion to finish quiz
+
 alert('You got ' + totalCorrect);
