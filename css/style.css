@@ -5,11 +5,12 @@ h1 {
     font-family: fantasy;
     padding-top: 20px;
 }
-p,footer {
+p {
     text-align: center;
     border: 2px solid blue;
     margin: 20px;
     font-size: 20px;
+    
  }
 
 img {
@@ -20,4 +21,15 @@ img {
 }
 span {
     text-decoration: underline;
+}
+
+ol{
+    list-style-type: decimal;
+    text-align: center;
+    /* border: 2px solid blue; */
+    margin: 20px;
+    font-size: 20px;
+}
+footer {
+    margin: 20px;
 }
