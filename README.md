@@ -1,2 +1,2 @@
 # about-me
-lab 2 assignment for 201
+about-me lab assignment for 201

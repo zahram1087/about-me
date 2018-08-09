@@ -6,16 +6,15 @@ h1 {
     padding-top: 20px;
 }
 p {
-    text-align: center;
-    border: 2px solid blue;
+    padding: 20px;
     margin: 20px;
     font-size: 20px;
     
  }
 
 img {
-    display: block;
-    margin-left: 300px;
+    /* display: block; */
+    margin-left: 370px;
     margin-top: 20px;
     border-radius: 127px;
 }
@@ -25,11 +24,12 @@ span {
 
 ol{
     list-style-type: decimal;
-    text-align: center;
-    /* border: 2px solid blue; */
     margin: 20px;
     font-size: 20px;
 }
+
 footer {
     margin: 20px;
+    /* border: 2px solid blue; */
+    padding: 20px;
 }
