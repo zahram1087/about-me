@@ -1,22 +1,29 @@
 h1 {
     background-color: blue;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     font-family: fantasy;
     padding-top: 20px;
+    font-weight:bolder;
+    
 }
 p {
     padding: 20px;
     margin: 20px;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: fantasy;
     
  }
 
 img {
-    /* display: block; */
-    margin-left: 370px;
     margin-top: 20px;
-    border-radius: 127px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    float: left;
+    padding-left: 15px;
+    padding-right: 20px;
 }
 span {
     text-decoration: underline;
@@ -24,12 +31,17 @@ span {
 
 ol{
     list-style-type: decimal;
-    margin: 20px;
-    font-size: 20px;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 425px;
 }
 
 footer {
-    margin: 20px;
-    /* border: 2px solid blue; */
-    padding: 20px;
+    font-family: fantasy;
+
+}
+
+span {
+    font-size: 30px;
+    font-weight: bold;
 }

@@ -8,7 +8,7 @@ function firstQuestion() { // First question - encompasses userName creation as 
 
   var userName = prompt('Hi there! What is your name?');
 
-  alert(' Thanks for being here ' + userName + '. I\'m going to ask you some questions about me . These are yes or no questions so please feel free to answer with yes/no ');
+  alert('Thanks for being here ' + userName + '. I\'m going to ask you some questions about me.These are yes or no questions so please answer with either yes/no. ');
 
   //ask them five yes/no questions
 
@@ -34,7 +34,7 @@ function secondQuestion() {
     alert('Good job! I sure do share a birthday');
     totalCorrect++;
   } else {
-    alert('wrong! I have a twin sister!');
+    alert('Wrong! I have a twin sister!');
     console.log(' The user was asked if I was a twin and responded ' + answerTwo);
   }
 
@@ -50,7 +50,7 @@ function thirdQuestion() { // Creates thirdQuestion
     alert('You must have caugt my accent because you got it right!');
     totalCorrect++;
   } else {
-    alert('the USA is my home but my place of birth is Somalia');
+    alert('The USA is my home but my place of birth is Somalia!');
     console.log(' The user was asked if I was born in the USA and responded ' + answerThree);
   }
 
@@ -66,7 +66,7 @@ function fourthQuestion() { // creates fourthQuestion
     alert('Good Job!');
     totalCorrect++;
   } else {
-    alert('really? As if I would be caught!');
+    alert('Really? As if I would be caught!');
     console.log(' The user was asked if I ever committed a crime and responded ' + answerFour);
   }
 }
@@ -91,25 +91,34 @@ function fifthQuestion() { // creates fifthQuestion
 
 fifthQuestion(); // calls fifthQuestion to keep quiz going
 
+
 function sixthQuestion() { // creates sixthQuestion
 
 
   var answerSix = 6;
   var attempts = 0;
   while (attempts < 4) {
-    var userAnswerSix = parseInt(prompt('Can you guess what my favorite number is? hint it is between one and ten'));
-    if (userAnswerSix === answerSix) {
-      alert('good job, you got it!');
+    var guess = parseInt(prompt('Can you guess what my favorite number is? hint it is between one and ten'));
+    if (guess === answerSix) {
+      alert('Good job, you got it!');
       totalCorrect++;
       break;
     }
-    else if (userAnswerSix < answerSix) {
-      alert(' too low! guess higher');
+    //attempts++;
+    if (guess < answerSix) {
+      alert('Too low guess higher! You can do this!');
+
+
     }
-    else {
-      alert(' too high! guess lower');
+    else if (guess > answerSix) {
+      alert('Too high guess lower! I believe in you!');
+
+
     }
     attempts++;
+  }
+  if (guess !== answerSix) {
+    alert('You\'re out of chances! My favorite number is ' + answerSix);
   }
 
 } // closes sixthQuestion
@@ -122,21 +131,25 @@ function seventhQuestion() { // creates seventhQuestion
   console.log(answerSeven);
   var tries = 0;
   var wrongAnswer = true;
-  while (tries < 7 && wrongAnswer) {
-    var userAnswer = prompt('hi, can you guess the states I have lived in?');
+  while (tries < 6 && wrongAnswer) {
+    var userAnswer = prompt('hi, can you guess a state I have lived in?');
     for (var i = 0; i < answerSeven.length; i++) {
       if (answerSeven[i].toLowerCase() === userAnswer.toLowerCase()) {
         alert(' Good Job!');
         wrongAnswer = false;
         totalCorrect++;
-        //break;
+
       }
     }
     tries++;
-    if (tries > 6 && wrongAnswer) {
-      alert('thanks for playing the answers were California , North Carolina , Texas , New York  ');
+    if (tries < 6 && wrongAnswer) {
+      alert('Wrong try again');
     }
+
   }
+
+
+  alert('thanks for playing the answers were California , North Carolina , Texas , New York  ');
 
 } // closes seventhQuestion
 
