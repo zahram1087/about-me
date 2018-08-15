@@ -29,12 +29,20 @@ span {
     text-decoration: underline;
 }
 
-ol{
+ol {
     list-style-type: decimal;
     font-size: 30px;
     margin-top: 20px;
     margin-left: 425px;
 }
+
+ul {
+    /* list-style-type: decimal; */
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 425px;
+}
+
 
 footer {
     font-family: fantasy;
